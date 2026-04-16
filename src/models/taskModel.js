@@ -1,13 +1,11 @@
 // Camada de Model
 // Define a estrutura (formato) de uma tarefa
 
-const createTask = (id, title) => {
+export const createTask = (id, title) => {
   return {
     id,
     title,
-    completed: false,       // Desafio Júnior 1 — campo completed
+    completed: false,
     createdAt: new Date().toISOString(),
   };
 };
-
-module.exports = { createTask };

@@ -1,12 +1,13 @@
 import ListaTarefas from './components/ListaTarefas';
 
-import './App.css';
+import './style/App.css';
 
 function App() {
 
   return (
     <>
-      <h1>Gerenciador de Tarefas</h1>
+      <h1>Tarefas</h1>
+      <p className="subtitle">Mantenha o foco no que importa.</p>
       <ListaTarefas />
     </>
   );

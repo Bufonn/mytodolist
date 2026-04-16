@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0e0e0f;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  color: #f0ede8;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+p.subtitle {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 2rem;
+}

@@ -1,10 +1,8 @@
 // Camada de Controller
 // Intermediário entre requisição HTTP e a lógica de negócio (Service)
-// Responsabilidade: controlar o fluxo da requisição
 
-const taskService = require('../services/taskService');
+import taskService from '../services/taskService.js';
 
-// Função auxiliar para ler o body da requisição (Node.js puro)
 const getRequestBody = (req) => {
   return new Promise((resolve, reject) => {
     let body = '';
@@ -19,7 +17,6 @@ const getRequestBody = (req) => {
   });
 };
 
-// POST /tasks — Criar tarefa
 const createTask = async (req, res) => {
   const body = await getRequestBody(req);
 
@@ -33,14 +30,12 @@ const createTask = async (req, res) => {
   res.end(JSON.stringify(task));
 };
 
-// GET /tasks — Listar tarefas
 const listTasks = (req, res) => {
   const tasks = taskService.getTasks();
   res.statusCode = 200;
   res.end(JSON.stringify(tasks));
 };
 
-// GET /tasks/:id — Buscar por ID (Desafio Pleno)
 const getTaskById = (req, res, id) => {
   const task = taskService.getTaskById(id);
 
@@ -53,7 +48,6 @@ const getTaskById = (req, res, id) => {
   res.end(JSON.stringify(task));
 };
 
-// PUT /tasks/:id — Atualizar tarefa (título e/ou completed)
 const updateTask = async (req, res, id) => {
   const body = await getRequestBody(req);
   const task = taskService.updateTask(id, body);
@@ -67,7 +61,6 @@ const updateTask = async (req, res, id) => {
   res.end(JSON.stringify(task));
 };
 
-// DELETE /tasks/:id — Deletar tarefa
 const deleteTask = (req, res, id) => {
   const success = taskService.deleteTask(id);
 
@@ -80,10 +73,4 @@ const deleteTask = (req, res, id) => {
   res.end(JSON.stringify({ message: 'Removida' }));
 };
 
-module.exports = {
-  createTask,
-  listTasks,
-  getTaskById,
-  updateTask,
-  deleteTask,
-};
+export default { createTask, listTasks, getTaskById, updateTask, deleteTask };
