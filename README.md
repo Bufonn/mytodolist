@@ -43,8 +43,8 @@ Aplicação web de lista de tarefas (To-Do List) construída com **React + Vite*
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/react-todo.git
-cd react-todo
+git clone https://github.com/Bufonn/mytodolist.git
+cd mytodolist
 
 # Instale as dependências
 npm install
@@ -53,19 +53,45 @@ npm install
 ## ▶️ Execução
 
 ```bash
-npm run dev
+npm run dev:full
 ```
 
-Acesse: [http://localhost:5173](http://localhost:5173)
+Acesse: [http://localhost:5174](http://localhost:5174)
 
 ## 📁 Estrutura do Projeto
 
 ```
-src/
-├── components/
-│   └── ListaTarefas.jsx   # Componente principal com toda a lógica
-├── App.jsx                # Componente raiz
-└── App.css                # Estilos globais
+MYTODOLIST/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── ListaTarefas.jsx
+│   ├── controllers/
+│   │   └── taskController.js
+│   ├── data/
+│   │   └── tasks.json
+│   ├── models/
+│   │   └── taskModel.js
+│   ├── routes/
+│   │   └── taskRoutes.js
+│   ├── services/
+│   │   └── taskService.js
+│   ├── style/
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── ListaTarefas.css
+│   ├── app.js
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
 ```
 
 ## 💡 Explicação da Solução
