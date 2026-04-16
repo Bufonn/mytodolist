@@ -1,5 +1,5 @@
-// Camada de Service
-// Contém a lógica de negócio — "coração da aplicação"
+//Camada de Service
+//Contém a lógica de negócio "coração da aplicação"
 
 import { createTask } from '../models/taskModel.js';
 import fs from 'fs';

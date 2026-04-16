@@ -1,5 +1,5 @@
-// Camada de Rotas
-// Mapeia URLs para funções do Controller
+//Camada de Rotas
+//Mapeia URLs para funções do Controller
 
 import taskController from '../controllers/taskController.js';
 
@@ -14,7 +14,7 @@ export default (req, res) => {
   if (url === '/tasks' && method === 'POST') {
     return taskController.createTask(req, res);
   }
-
+  
   if (url.startsWith('/tasks/')) {
     const parts = url.split('/');
     const id = parseInt(parts[2]);

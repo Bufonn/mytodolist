@@ -1,5 +1,5 @@
-// Camada de Controller
-// Intermediário entre requisição HTTP e a lógica de negócio (Service)
+//Camada de Controller
+//Intermediário entre requisição HTTP e a lógica de negócio (Service)
 
 import taskService from '../services/taskService.js';
 
